@@ -1,0 +1,172 @@
+<style type="text/css">
+/*因为后面的mian部分min-height继承的是父元素的，也就是继承这里的高度*/
+html,body {
+  margin: 0;
+  padding:0;
+  height: calc(100% - 49px);
+}
+/*去除ul的黑点和空间*/
+ul{  
+	list-style-type:none;  
+	padding: 0px; 
+}  
+
+@media (max-width: 768px) { 
+	/*隐藏侧边栏*/
+	#siedebar{
+		display: none;
+	}
+	
+	/*底部信息*/
+	#footer{
+		bottom: 0px;
+		right: 0;
+	    background-color: #e9ecef;
+	    width: 100%;
+	    padding: 1em;
+	}
+}
+
+@media (min-width: 768px) { 
+	/*中间main样式*/
+	#main{
+		margin-left: 200px;
+	    background: white;
+		min-height: 100%;
+	}
+	
+	/*底部信息*/
+	#footer{
+	    background-color: #e9ecef;
+	    padding: 1em;
+	    margin-left: 200px;
+	}
+}
+
+/*顶部导航，message 蓝色圆圈*/
+#topnav-message .indicator {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    font-size: 10px;
+}
+
+/*侧边导航*/
+#siedebar{
+	background: #343a40;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    padding: 0px;
+}
+
+/*侧边导航a标签样式*/
+#siedebar a{
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    color: #868e96;
+    padding: 1em;
+    text-decoration: none;
+}
+
+/*侧边导航a悬停标签样式*/
+#siedebar a:hover {
+    color: #868e96;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #4c4c4c;
+	color: #4093ff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/*侧边导航标题*/
+#siedebar-title{
+	font-size: 16px;
+    display: block;
+    padding-left: 13px;
+    color: #fff;
+    box-sizing: border-box;
+    width: 200px;
+}
+
+/*侧边导航底部*/
+#siedebar-bottom{
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	background: #4c4c4c;
+	width: 100%;
+}
+
+/*当折叠时，>*/
+.sidebar-group.collapsed:after {
+	float: right;
+	content: '\f105';
+
+}
+/*当展开时候，箭头向下*/
+.sidebar-group:after {
+    float: right;
+	content: '\f107';
+    font-family: 'FontAwesome';
+
+}
+
+/*左边bar样式*/
+#leftbar{
+	background: rgba(52, 58, 64, 0.5);
+    position: fixed;
+    left: 0px;
+    bottom: 3px;
+    padding: 0px;
+    width: 25px;
+    height: 40px;
+    z-index: 999;
+    display: none;
+}
+
+/*左边bar悬停样式*/
+#leftbar > div{
+	line-height: 40px;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+
+/*面包屑导航*/
+.breadcrumb{
+	font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.75em;
+    background-color: #f5f5f5;
+    border-radius: .5rem;
+    border: 1px solid transparent;
+    border-color: #ddd;
+    margin-bottom: 5px;
+}
+
+
+/*向上功能，样式*/
+#rightbar{
+	position: fixed;
+    right: 3px;
+    bottom: 3px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    background: rgba(52, 58, 64, 0.5);
+    line-height: 40px;
+    border-radius: .25rem!important;
+}
+
+/*向上功能，当悬停时候样式*/
+#rightbar:hover {
+  background: #343a40;
+}
+</style>

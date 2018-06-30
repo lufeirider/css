@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>后台管理系统</title>
+		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/admin.css" />
+	</head>
+
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="topnav">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+						<span class="sr-only">切换导航</span>
+						<span class="icon-bar"></span> <!--对应Android-->
+						<span class="icon-bar"></span> <!--对应PHP-->
+						<span class="icon-bar"></span> <!--对应PHP-->
+						<span class="icon-bar"></span> <!--对应PHP-->
+					</button>
+
+					<div class="navbar-left">
+						<a class="logo" href="#">
+							<img src="//pb4n14zvb.bkt.clouddn.com/logo.png" style="height: 40px;margin-top: 7px;" />
+						</a>
+					</div>
+
+				</div>
+
+				<div class="collapse navbar-collapse" id="navbar-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active">
+							<a href="#">创投咨询</a>
+						</li>
+						<li>
+							<a href="#">创业课程</a>
+						</li>
+						<li>
+							<a href="#">凡卓资本</a>
+						</li>
+						<li>
+							<a href="#">搜索</a>
+						</li>
+						<li>
+							<a id="topnav-message" href="#">
+								<i class="fa fa-fw fa-envelope"></i>
+								<span class="d-lg-none" id="messagebage">
+					            	Messages
+									<span class="badge badge-pill badge-primary" >12 New</span>
+								</span>
+								<span class="indicator text-primary">
+									<i class="fa fa-fw fa-circle"></i>
+					            </span>
+							</a>
+						</li>
+						<li>
+							<a href="#"><span class="fa fa-fw fa-sign-out"></span>Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div id="siedebar">
+			<div id="sidebar-warpper">
+				<h2 id="siedebar-title">后台管理</h2>
+				<ul>
+					<li>
+						<a href="#">
+							<span class="glyphicon glyphicon-align-center" style="padding: 5px;"></span>
+							<span>控制台</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="glyphicon glyphicon-send" style="padding: 5px;"></span>
+							<span>图形</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="glyphicon glyphicon-folder-open" style="padding: 5px;"></span>
+							<span>表格</span>
+						</a>
+					</li>
+
+					<li>
+						
+						<a class="sidebar-group collapsed" data-toggle="collapse" href="#collapseComponents">
+							<span class="glyphicon glyphicon-folder-open" style="padding: 5px;"></span>
+							<span>多级目录</span>
+						</a>
+						
+						<ul class="collapse" id="collapseComponents">
+							<li>
+								<a href="#">
+									<span style="padding: 5px;margin-left: 14px;"></span>
+									<span>一级目录</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span style="padding: 5px;margin-left: 14px;"></span>
+									<span>二级目录</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<a href="#">
+							<span class="glyphicon glyphicon-folder-open" style="padding: 5px;"></span>
+							<span class="nav-link-text">链接</span>
+						</a>
+					</li>
+				</ul>
+
+				<ul id="siedebar-bottom">
+					<li>
+						<a class="text-center">
+							<i><</i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="leftbar">
+			<div>>></div>
+		</div>
+
+		<div id="main">
+			<div class="container-fluid">
+
+				<ol class="breadcrumb">
+					<li>
+						<a href="#">Dashboard</a>
+					</li>
+					<li class="active">Cards</li>
+				</ol>
+
+				<div class="panel-body">
+					<div class="panel panel-default">
+						<div class="panel-heading">查询条件</div>
+						<div class="panel-body">
+							<form id="formSearch" class="form-horizontal">
+								<div class="col-md-5">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">名</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control" id="firstname" placeholder="请输入名">
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-5">
+									<div class="form-group">
+										<label for="firstname" class="col-sm-2 control-label">字</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control" id="firstname" placeholder="请输入字">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-2" style="text-align: center;">
+									<button type="button" id="btn_query" class="btn btn-primary">查询</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div>
+						<table class="table table-bordered table-striped table-hover">
+							<tr>
+								<th>序号</th>
+								<th>姓名</th>
+								<th>年龄</th>
+							</tr>
+
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>张三</td>
+								<td>22</td>
+							</tr>
+						</table>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<div id="footer">
+			<div class="text-center">
+				<small>Copyright © Your Website 2018</small>
+			</div>
+		</div>
+
+		<a id="rightbar" style="display: none;">
+			<span class="glyphicon glyphicon-arrow-up"></span>
+		</a>
+
+		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			//根据计算来，来设置高度
+			$("#siedebar").css("top", $(".navbar-fixed-top").height());
+			$("#main").css("margin-top", $(".navbar-fixed-top").height());
+			//			这里是点击sidebar-bottom,自动隐藏sidebar,并且main会自动调整距离
+			//			注意这里要使用两个div,一个是#sidebar-warpper,#siedebar,把#sidebar-warpper变成none,#siedebar的宽度就为0
+			//			不然直接#sidebar-warpper变成none,宽度还是200px
+			$("#siedebar-bottom").click(function() {
+				$("#sidebar-warpper").css("display", "none");
+				$("#leftbar").css("display", "block");
+				$("#main").css("margin-left", $("#siedebar").width());
+				$("#footer").css("margin-left", $("#siedebar").width());
+			});
+			$("#leftbar").click(function() {
+				$("#sidebar-warpper").css("display", "block");
+				$("#leftbar").css("display", "none");
+				$("#main").css("margin-left", $("#siedebar").width());
+				$("#footer").css("margin-left", $("#siedebar").width());
+			});
+			//rightbar滚动到顶部
+			$("#rightbar").click(function() {
+				$("html, body").animate({
+					scrollTop: $("#main").offset().top - 50
+				}, {
+					duration: 500,
+					easing: "swing"
+				});
+			});
+
+			//小于90则隐藏rightbar
+			$(window).scroll(function() { //开始监听滚动条
+				//获取当前滚动条高度
+				var topheight = $(document).scrollTop();
+				//用于调试 弹出当前滚动条高度
+				//判断如果滚动条大于90则弹出 "ok"
+				if(topheight < 90) {
+					$("#rightbar").css("display", "none");
+				} else {
+					$("#rightbar").css("display", "block");
+				}
+			});
+		</script>
+	</body>
+
+</html>
