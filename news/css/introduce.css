@@ -17,7 +17,7 @@ hr{
 
 /*通过设置背景图，然后活动内容，通过margin-top能够位移居于另外的div之上。*/
 #activity{
-	background: url(https://www.bufanbiz.com/static/build/images/aclass-pc-banner.png) no-repeat;
+	background: url(//pb4n14zvb.bkt.clouddn.com/aclass-pc-banner.png) no-repeat;
 	height: 300px;
 	width: 100%;
 }
