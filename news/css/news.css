@@ -1,0 +1,364 @@
+/*设置hr*/
+hr{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 0;
+	border-top: 1px solid #eee;
+}
+
+
+@media (max-width: 768px) { 
+	body {
+		margin-top: 60px;
+		background: white;
+	}
+	
+	/*手机版 隐藏pc中的图片列表*/
+	#main-news-imglist{
+		display: none;
+	}
+	
+	/*手机版 隐藏pc版中的页脚信息中的地址*/
+	#footer-info #info-address-pc{
+		display: none;
+	}
+	
+	/*手机版 隐藏pc版中的页脚备案中的备案信息*/
+	#footer-record #record-pc{
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	body {
+	  padding-top: 60px;
+	  background: #eee;
+	}
+	
+	/*通过设置border来让mian-new 与侧边栏之间的空间*/
+	#main-news{
+		padding-top: 10px;
+		border: 5px solid #eee;
+	}
+	
+	/*电脑版 需要隐藏页脚信息中的手机版信息，让样式比较整齐*/
+	#footer-info #info-address-mo{
+		display: none;
+	}
+	
+	/*电脑版 隐藏手机版样式*/
+	#footer-record #record-mo{
+		display: none;
+	}
+}
+/*顶部导航左边的logo*/
+#navbar-left > #logo{
+	height: 40px;
+	margin-top: 7px;
+}
+/*主体中新闻部分*/
+#main-news{
+	background: white;
+}
+
+/*设置轮播图片大小*/
+.carousel-inner>.item>img{
+	height: 250px;
+	width: 100%;
+}
+
+/*图片列表*/
+#main-news-imglist{
+	margin-top: 10px;
+}
+
+/*设置图片大小，高度是固定的，宽度随盒子宽度保持一致*/
+#main-news-imglist > .col-md-4 > img{
+	height: 150px;
+	width: 100%;
+}
+
+/*图片上的文字使用绝对定位，相对于父元素,大小f12根据图片大小来决定*/
+#main-news-imglist > .col-md-4 > div{
+	height: 60px;
+	width: 226.656px;
+	padding: 5px ;
+	vertical-align: middle;
+	border: 0;
+	box-sizing: border-box;
+	color: #fff;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	bottom: 0;
+	line-height: 26px;
+	cursor: pointer;
+}
+
+/*bootsrap自带的media会把第一个media有一个margin-top*/
+.media{
+	margin-top: 0px;
+}
+
+/*设置media的大小*/
+.media-left > img{
+	width: 180px;
+	height: 150px;
+}
+
+/*设置media-body离突变的距离*/
+.media-body{
+	padding-left: 10px;
+}
+
+/*media标题设置高度*/
+.media-heading{
+	color: #212121;
+	font-size: 22px;
+	overflow: hidden;
+	height: 50px;
+	line-height: 25px;
+}
+/*media设置内容高度*/
+.media-content{
+	color: #878787;
+	font-size: 14px;
+	height: 60px;
+	line-height: 21px;
+	overflow: hidden;
+	padding: 5px;
+}
+
+/*设置media类型*/
+#media-type{
+	float: left;
+}
+
+/*设置media作者信息*/
+#media-author{
+	float: right;
+}
+
+/*加载更多按钮样式*/
+#main-more{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+/*加载更多按钮样式*/
+#main-more > button{
+	width: 60%;
+}
+
+/*加载更多等待样式*/
+#main-more > img{
+	height:40px;
+	width: 40px;
+	display: block;
+	margin: 0 auto;
+	display: none;
+}
+
+/*侧边栏背景颜色*/
+#main-side{
+	background: white;
+	border: 5px solid #eee;
+}
+
+/*侧边栏头部样式*/
+.main-side-heading{
+	height: 60px;
+}
+
+/*侧边栏头部标题样式*/
+.main-side-heading h3{
+	float: left;
+}
+
+/*侧边栏头部a标签样式*/
+.main-side-heading > a{
+	float: right;
+	height: 60px;
+	line-height: 60px;
+}
+
+/*侧边栏离线课程样式*/
+#main-side-outline{
+	margin-bottom: 10px;
+	position: relative;
+}
+
+/*侧边栏离线图片*/
+#main-side-outline > img{
+	height: 200px;
+	width: 100%;
+}
+
+/*侧边栏离线图片上的文字*/
+#main-side-outline > div{
+	width: 100%;
+	text-align:center;
+	box-sizing: border-box;
+	color: #fff;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	bottom: 0;
+	line-height: 26px;
+	padding: 4px 15px;
+	cursor: pointer;
+}
+
+/*在线课程div*/
+#main-side-online{
+	margin-bottom: 10px;
+}
+
+/*在线课程图片*/
+#main-side-online > img{
+	height: 200px;
+	width: 100%;
+}
+
+
+/*侧边栏礼物*/
+#main-side-gift{
+	margin-bottom: 10px;
+}
+
+/*侧边栏图片*/
+#main-side-gift > img{
+	height: 180px;
+	width: 100%;
+}
+
+/*侧边栏关注*/
+#main-side-follow{
+	height: 160px;
+	width:60%;
+	float: left;
+}
+
+/*侧边栏关注weibo，这里背景图片缩放只能用size*/
+#main-side-follow > #zhihu{
+	background: url(//pb4n14zvb.bkt.clouddn.com/side-icon.png) no-repeat;
+	background-size: 19%;
+	height: 50px;
+	line-height:38px;
+	padding-left: 60px;
+}
+
+/*侧边栏关注weibo*/
+#main-side-follow > #weibo{
+	background: url(//pb4n14zvb.bkt.clouddn.com/side-icon.png) no-repeat;
+	background-size: 19%;
+	height: 50px;
+	line-height:38px;
+	background-position: 0 -50px;
+	padding-left: 60px;
+}
+
+/*侧边栏关注toutiao*/
+#main-side-follow > #toutiao{
+	background: url(//pb4n14zvb.bkt.clouddn.com/side-icon.png) no-repeat;
+	background-size: 20%;
+	height: 50px;
+	line-height:30px;
+	background-position: 0 -110px;
+	padding-left: 60px;
+}
+
+/*侧边栏关注a标签*/
+#main-side-follow a{
+	line-height: 0px;
+	text-decoration: none;
+	cursor: pointer;
+	color: black;
+}
+
+/*侧边栏二维码*/
+#main-side-code{
+	height: 150px;
+	width:40%;
+	float: left;
+}
+
+/*侧边栏二维码图片*/
+#main-side-code > img{
+	height: 100px;
+	width: 100px;
+	align: center;
+	display: block;
+	margin: 0 auto;
+}
+
+/*侧边栏二维码文字介绍*/
+#main-side-code > p{
+	text-align: center;
+}
+
+/*侧边栏中的文字列表*/
+.list-group-item{
+	border: none;
+}
+
+/*页脚信息*/
+#footer-info{
+	background: #555e68;
+}
+
+/*页脚信息文字样式设置*/
+#footer-info p{
+	color: #c9c9c9;
+}
+
+/*页脚信息 logo*/
+#footer-info #info-logo{
+	height: 90px;
+	line-height: 90px;
+	text-align: center;
+}
+
+/*页脚信息 logo中的图片*/
+#footer-info #info-logo img{
+	display: block;
+	height: 50px;
+	width: 165px;
+	line-height: 80px;
+	display: inline-block; 
+	vertical-align: middle;
+}
+
+/*页脚信息的地址*/
+#footer-info #info-address{
+	margin-top: 15px;
+	line-height: 30px;
+	text-align: center;
+}
+
+/*页脚信息的地址中a标签*/
+#footer-info #info-address a{
+	color: #c9c9c9;
+	cursor: pointer;
+}
+
+/*页脚信息的微信信息 微博信息*/
+#footer-info #info-link{
+	margin-top: 10px;
+	line-height: 30px;
+	text-align: center;
+}
+
+/*备案信息*/
+#footer-record{
+	background: #383E44;
+	color: #C9C9C9;
+	height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+/*备案信息中的手机版样式*/
+#footer-record #record-mo{
+	padding: 0;
+	margin: 0;
+	font-size: 10px;
+}
